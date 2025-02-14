@@ -238,8 +238,11 @@ tstp(int ignored)
     getyx(curscr, y, x);
     mvcur(y, x, oy, ox);
     fflush(stdout);
-    curscr->_cury = oy;
-    curscr->_curx = ox;
+    
+    // Throws ERROR: Incomplete definition of type 'WINDOW' (aka 'struct _win_st')
+    // I believe this was already handled by mvcur(y, x, oy, ox)
+    // curscr->_cury = oy;
+    // curscr->_curx = ox;
 }
 
 /*
