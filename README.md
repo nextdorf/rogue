@@ -43,7 +43,9 @@ For a detailed guide see either `rogue.html` for scroll down on this README.
 
 This project is licensed under the BSD License. See the `LICENSE.TXT` file for details.
 
-#
+###
+
+----
 
 
 # A Guide to the Dungeons of Doom
@@ -57,7 +59,7 @@ This project is licensed under the BSD License. See the `LICENSE.TXT` file for d
 
 ###
 
-    Rogue is a visual CRT based fantasy game which runs under the UNIX timesharing system. This paper describes how to play rogue, and gives a few hints for those who might otherwise get lost in the Dungeons of Doom.
+___Rogue is a visual CRT based fantasy game which runs under the UNIX timesharing system. This paper describes how to play rogue, and gives a few hints for those who might otherwise get lost in the Dungeons of Doom.___
 
 ## 1. Introduction
 
