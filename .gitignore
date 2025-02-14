@@ -54,3 +54,5 @@ dkms.conf
 # CUSTOM
 /local
 /build
+/.cache
+/.vscode

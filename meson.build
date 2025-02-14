@@ -216,7 +216,7 @@ main_conf_data = configuration_data({
   'LSTAT_FOLLOWS_SLASHED_SYMLINK': 1,
 
   # Define to include wizard mode
-  # 'MASTER': false,
+  'MASTER': true,
 
   # Define if maxusers feature should be enabled
   # 'MAXLOAD': false,
@@ -229,7 +229,7 @@ main_conf_data = configuration_data({
   # 'NAMELIST': false,
 
   # word for the number of scores to store in scoreboard
-  'NUMNAME': '"TEN"',
+  'NUMNAME': '"Ten"',
 
   # number of scores to store in scoreboard
   'NUMSCORES': 10,
@@ -250,7 +250,7 @@ main_conf_data = configuration_data({
   'PACKAGE_VERSION': '"@0@"'.format(misc_conf_data.get('PACKAGE_VERSION')),
 
   # Define crypt(3) wizard mode password
-  # 'PASSWD': false,
+  'PASSWD': '"mTreRQpbBWGLI"', # Password for wizard mode is bathtub
 
   # Define as the return type of signal handlers (`int' or `void').
   'RETSIGTYPE': 'void',
@@ -305,7 +305,7 @@ configure_file(output: 'config.h', configuration: main_conf_data)
 # deps = dependency('ncurses')
 deps = dependency('curses')
 
-add_project_arguments(['-DHAVE_CONFIG_H'], language: 'cpp')
+add_project_arguments(['-DHAVE_CONFIG_H'], language: 'c')
 
 source_files = files(
   'vers.c', 'extern.c', 'armor.c', 'chase.c', 'command.c', 'daemon.c', 'daemons.c', 'fight.c',
