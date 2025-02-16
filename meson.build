@@ -1,10 +1,10 @@
-project('Rogue', 'c')
+project('Rogue', 'c', license: 'BSD', license_files: 'LICENSE.TXT', version: '5.4.4')
 
 misc_conf_data = configuration_data({
   'PACKAGE_NAME': meson.project_name(),
   'PACKAGE_TARNAME': 'rogue',
-  'PACKAGE_VERSION': '5.4.4',
-  'PACKAGE_STRING': 'Rogue 5.4.4',
+  'PACKAGE_VERSION': meson.project_version(),
+  'PACKAGE_STRING': '@0@ @1@'.format(meson.project_name(), meson.project_version()),
   'PACKAGE_BUGREPORT': 'yendor@rogueforge.net',
 
   'PROGRAM': 'rogue',
@@ -305,7 +305,7 @@ configure_file(output: 'config.h', configuration: main_conf_data)
 # deps = dependency('ncurses')
 deps = dependency('curses')
 
-add_project_arguments(['-DHAVE_CONFIG_H'], language: 'c')
+add_project_arguments(['-DHAVE_CONFIG_H', '-D_GNU_SOURCE'], language: 'c')
 
 source_files = files(
   'vers.c', 'extern.c', 'armor.c', 'chase.c', 'command.c', 'daemon.c', 'daemons.c', 'fight.c',

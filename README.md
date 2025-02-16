@@ -18,6 +18,14 @@ Ensure you have the following dependencies installed:
 - **Ninja** (build tool used by Meson)
 - **curses** (for terminal-based UI rendering)
 
+## Installing Dependencies
+
+__Alpine:__
+
+```bash
+apk add build-base git meson ncurses-dev
+```
+
 ## Installation & Build
 
 Clone the repository and build the project using Meson:
